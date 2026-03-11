@@ -1,0 +1,256 @@
+﻿<Window x:Class="MAB_Mailer.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MAB TECH - Giriş" Height="650" Width="420" 
+        WindowStartupLocation="CenterScreen" 
+        ResizeMode="NoResize" 
+        Background="Transparent"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        TextOptions.TextFormattingMode="Display"
+        TextOptions.TextRenderingMode="ClearType" Icon="/icon.png">
+
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="{DynamicResource InputBackground}"/>
+            <Setter Property="Foreground" Value="{DynamicResource InputForeground}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource InputBorder}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                CornerRadius="6">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="ComboBoxItem">
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Foreground" Value="{DynamicResource InputForeground}"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBoxItem">
+                        <Border x:Name="bd" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}">
+                            <ContentPresenter />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="bd" Property="Background" Value="#1E88E5"/>
+                                <Setter Property="Foreground" Value="White"/>
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter TargetName="bd" Property="Background" Value="#0D47A1"/>
+                                <Setter Property="Foreground" Value="White"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="ComboBox">
+            <Setter Property="Foreground" Value="{DynamicResource InputForeground}"/>
+            <Setter Property="Background" Value="{DynamicResource InputBackground}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource InputBorder}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Height" Value="32"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="6,0,0,0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBox">
+                        <Grid>
+                            <ToggleButton Name="ToggleButton" 
+                                          BorderBrush="{TemplateBinding BorderBrush}" 
+                                          Background="{TemplateBinding Background}" 
+                                          Foreground="{TemplateBinding Foreground}"
+                                          Grid.Column="2" 
+                                          Focusable="false" 
+                                          IsChecked="{Binding Path=IsDropDownOpen,Mode=TwoWay,RelativeSource={RelativeSource TemplatedParent}}" 
+                                          ClickMode="Press">
+                                <ToggleButton.Template>
+                                    <ControlTemplate TargetType="ToggleButton">
+                                        <Border x:Name="Border" Grid.ColumnSpan="2" CornerRadius="6" 
+                                                Background="{TemplateBinding Background}" 
+                                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                                BorderThickness="1">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition />
+                                                    <ColumnDefinition Width="20" />
+                                                </Grid.ColumnDefinitions>
+                                                <Path x:Name="Arrow" Grid.Column="1" Fill="{TemplateBinding Foreground}" 
+                                                      HorizontalAlignment="Center" VerticalAlignment="Center" Data="M 0 0 L 4 4 L 8 0 Z"/>
+                                            </Grid>
+                                        </Border>
+                                    </ControlTemplate>
+                                </ToggleButton.Template>
+                            </ToggleButton>
+                            <ContentPresenter Name="ContentSite" IsHitTestVisible="False" Content="{TemplateBinding SelectionBoxItem}" 
+                                              ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}" 
+                                              ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}" 
+                                              Margin="10,3,23,3" VerticalAlignment="Center" HorizontalAlignment="Left" />
+                            <Popup Name="Popup" Placement="Bottom" IsOpen="{TemplateBinding IsDropDownOpen}" AllowsTransparency="True" Focusable="False" PopupAnimation="Slide">
+                                <Grid Name="DropDown" SnapsToDevicePixels="True" MinWidth="{TemplateBinding ActualWidth}" MaxHeight="{TemplateBinding MaxDropDownHeight}">
+                                    <Border x:Name="DropDownBorder" Background="{DynamicResource InputBackground}" 
+                                            BorderThickness="1" BorderBrush="{DynamicResource InputBorder}" CornerRadius="5">
+                                        <Border.Effect>
+                                            <DropShadowEffect Color="Black" BlurRadius="10" Opacity="0.5"/>
+                                        </Border.Effect>
+                                        <ScrollViewer Margin="2" SnapsToDevicePixels="True">
+                                            <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained" />
+                                        </ScrollViewer>
+                                    </Border>
+                                </Grid>
+                            </Popup>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Style.Triggers>
+                <Trigger Property="HasItems" Value="False">
+                    <Setter Property="IsEnabled" Value="False"/>
+                    <Setter Property="Opacity" Value="0.6"/>
+                    <Setter Property="ToolTip" Value="Seçilecek veri yok."/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="WindowControlBtn" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="{DynamicResource TextSecondary}"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#20000000"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="WindowCloseBtn" TargetType="Button" BasedOn="{StaticResource WindowControlBtn}">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FFCDD2"/>
+                    <Setter Property="Foreground" Value="#D32F2F"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="15">
+        <Border Background="{DynamicResource CardBackground}" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect Color="{DynamicResource ShadowColor}" BlurRadius="20" ShadowDepth="5" Opacity="0.4"/>
+            </Border.Effect>
+        </Border>
+
+        <Border Background="{DynamicResource AppBackground}" CornerRadius="20" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" ClipToBounds="True">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Border Grid.Row="0" Background="{DynamicResource CardBackground}" MouseDown="TitleBar_MouseDown" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="0,0,0,1" CornerRadius="20,20,20,20">
+                    <Grid>
+                        <TextBlock Text="MAB TECH LOGIN" FontWeight="Bold" Foreground="#0277BD" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,0,0,0"
+                                   Cursor="Hand" MouseLeftButtonDown="Logo_Click"/>
+
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,10,0">
+                            <Button Content="—" Width="40" Height="30" Style="{StaticResource WindowControlBtn}" Click="BtnMinimize_Click"/>
+                            <Button Content="✕" Width="40" Height="30" Style="{StaticResource WindowCloseBtn}" Click="BtnClose_Click"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+
+                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                    <StackPanel Margin="20">
+                        <TextBlock Text="HOŞ GELDİNİZ" FontSize="22" FontWeight="Heavy" HorizontalAlignment="Center" Foreground="#1E88E5" Margin="0,10,0,5"/>
+                        <TextBlock Text="Mail Yönetim Paneli" FontSize="14" HorizontalAlignment="Center" Foreground="{DynamicResource TextSecondary}" Margin="0,0,0,25"/>
+
+                        <Border Background="{DynamicResource CardBackground}" CornerRadius="15" Padding="15" Margin="0,0,0,15" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1">
+                            <StackPanel>
+                                <TextBlock Text="Kayıtlı Hesap Seçin" Foreground="{DynamicResource TextSecondary}" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                                <Grid Margin="0,0,0,15">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <ComboBox x:Name="cmbAccounts" Grid.Column="0" Height="35" DisplayMemberPath="Email" VerticalContentAlignment="Center" Margin="0,0,5,0"/>
+                                    <Button x:Name="btnDeleteAccount" Grid.Column="1" Content="Sil" Width="50" Height="35" Style="{DynamicResource RedGlassButton}" Click="BtnDeleteAccount_Click"/>
+                                </Grid>
+                                <Button x:Name="btnLogin" Content="SİSTEME GİRİŞ YAP" Height="45" Style="{DynamicResource BaseGlassButton}" Click="BtnLogin_Click"/>
+                            </StackPanel>
+                        </Border>
+
+                        <TextBlock Text="- VEYA -" HorizontalAlignment="Center" Foreground="{DynamicResource TextSecondary}" Margin="0,10"/>
+
+                        <Expander Header="Yeni Hesap Ekle" BorderBrush="{DynamicResource BorderBrush}" Background="{DynamicResource CardBackground}" Margin="0,10,0,0" Foreground="{DynamicResource TextPrimary}">
+                            <StackPanel Margin="10">
+                                <TextBlock Text="Hızlı Kurulum (Provider):" Foreground="#009688" FontWeight="Bold" Margin="0,5"/>
+                                <ComboBox x:Name="cmbProviders" SelectionChanged="CmbProviders_SelectionChanged" Height="30" Margin="0,0,0,10">
+                                    <ComboBoxItem Content="Hotmail / Outlook"/>
+                                    <ComboBoxItem Content="Gmail"/>
+                                    <ComboBoxItem Content="Manuel Giriş"/>
+                                </ComboBox>
+
+                                <TextBlock Text="Görünen İsim (Ad Soyad):" Foreground="{DynamicResource TextPrimary}" Margin="0,5"/>
+                                <TextBox x:Name="txtDisplayName" Height="30" Padding="5" ToolTip="Mail karşı tarafa gittiğinde görünecek isim (Örn: Ad Soyad)"/>
+
+                                <TextBlock Text="E-Posta Adresi:" Foreground="{DynamicResource TextPrimary}" Margin="0,5"/>
+                                <TextBox x:Name="txtNewEmail" Height="30" Padding="5"/>
+
+                                <TextBlock Text="Şifre / Uygulama Şifresi:" Foreground="{DynamicResource TextPrimary}" Margin="0,5"/>
+                                <PasswordBox x:Name="txtNewPass" Height="30" Padding="5" BorderBrush="{DynamicResource BorderBrush}" Background="{DynamicResource InputBackground}" Foreground="{DynamicResource InputForeground}" CaretBrush="{DynamicResource InputForeground}"/>
+
+                                <Grid Margin="0,10,0,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Grid.Column="0" Margin="0,0,5,0">
+                                        <TextBlock Text="SMTP Host:" Foreground="{DynamicResource TextPrimary}"/>
+                                        <TextBox x:Name="txtNewHost" Height="30" Padding="5" Text=""/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Column="1">
+                                        <TextBlock Text="Port:" Foreground="{DynamicResource TextPrimary}"/>
+                                        <TextBox x:Name="txtNewPort" Height="30" Padding="5" Text="587"/>
+                                    </StackPanel>
+                                </Grid>
+
+                                <CheckBox x:Name="chkSsl" Content="SSL/TLS Güvenliği" IsChecked="True" Margin="0,15,0,0" Foreground="{DynamicResource TextSecondary}"/>
+
+                                <Button Content="HESABI KAYDET" Height="40" Margin="0,15,0,0" Click="BtnSaveAccount_Click" Style="{DynamicResource GreenGlassButton}"/>
+                            </StackPanel>
+                        </Expander>
+
+                        <TextBlock x:Name="lblStatus" Text="" Foreground="#E53935" HorizontalAlignment="Center" Margin="0,15,0,0" TextWrapping="Wrap"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
