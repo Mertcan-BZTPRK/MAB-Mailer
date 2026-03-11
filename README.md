@@ -26,12 +26,9 @@ Toplu ve kişiselleştirilmiş e-posta gönderimi için geliştirilmiş masaüst
 
 ## 📸 Ekran Görüntüleri
 
-> Ekran görüntülerini `screenshots/` klasörüne ekleyip aşağıdaki satırları açabilirsiniz:
-
-<!--
 ![Login](screenshots/login.png)
-![Main](screenshots/main.png)
--->
+![Main - Dark](screenshots/main.png)
+![Main - Light](screenshots/mainLight.png)
 
 ---
 
