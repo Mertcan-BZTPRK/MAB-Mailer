@@ -28,6 +28,8 @@
 
 ---
 
+# 🇬🇧 English
+
 ## ✨ Features
 
 - 📋 **Bulk Import from Excel** — Generate a template, fill it in, and import contacts instantly
@@ -41,23 +43,6 @@
 - 🌗 **Auto Theme** — Automatically follows Windows Light / Dark theme
 - 🔀 **Spoofing** — Customize the sender address (if SMTP server allows)
 
----
-
-## ✨ Özellikler
-
-- 📋 **Excel'den Toplu Aktarım** — Şablon oluştur, doldur ve kişileri anında içe aktar
-- 👥 **Grup Yönetimi** — Kişileri grupla, filtrele ve hedefli e-posta gönder
-- ✉️ **Kişiselleştirilmiş E-posta** — `{Ad}`, `{Soyad}`, `{Email}` ve dinamik sütun değişkenleri kullan
-- 📝 **Mesaj Şablonları** — Sık gönderilen mesajları kaydet ve tekrar kullan
-- 🔗 **HTML Link** — Mail içeriğine tıklanabilir bağlantı ekle
-- ✒️ **İmza Desteği** — Otomatik e-posta imzası ekleme
-- 📮 **Kuyruk Sistemi** — Kuyruğa ekle, toplu gönder ve durumu takip et
-- 🔄 **Çoklu Hesap** — Birden fazla SMTP hesabı kaydet, kolayca geçiş yap
-- 🌗 **Otomatik Tema** — Windows Açık / Koyu temasına otomatik uyum sağlar
-- 🔀 **Spoofing** — Gönderen adresini özelleştir (SMTP sunucusu izin veriyorsa)
-
----
-
 ## 🛠️ Requirements
 
 | | |
@@ -65,18 +50,6 @@
 | **OS** | Windows 10 / 11 (x64) |
 | **Runtime** | [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472) |
 | **IDE** *(dev only)* | Visual Studio 2022+ |
-
----
-
-## 🛠️ Gereksinimler
-
-| | |
-|---|---|
-| **İşletim Sistemi** | Windows 10 / 11 (x64) |
-| **Çalışma Zamanı** | [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472) |
-| **IDE** *(geliştirici)* | Visual Studio 2022+ |
-
----
 
 ## 🚀 Getting Started
 
@@ -96,7 +69,38 @@ cd MAB-Mailer
 2. Wait for **NuGet Restore** to complete
 3. **Build → Start** ▶️
 
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open an **Issue** or submit a **Pull Request**.
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
 ---
+
+# 🇹🇷 Türkçe
+
+## ✨ Özellikler
+
+- 📋 **Excel'den Toplu Aktarım** — Şablon oluştur, doldur ve kişileri anında içe aktar
+- 👥 **Grup Yönetimi** — Kişileri grupla, filtrele ve hedefli e-posta gönder
+- ✉️ **Kişiselleştirilmiş E-posta** — `{Ad}`, `{Soyad}`, `{Email}` ve dinamik sütun değişkenleri kullan
+- 📝 **Mesaj Şablonları** — Sık gönderilen mesajları kaydet ve tekrar kullan
+- 🔗 **HTML Link** — Mail içeriğine tıklanabilir bağlantı ekle
+- ✒️ **İmza Desteği** — Otomatik e-posta imzası ekleme
+- 📮 **Kuyruk Sistemi** — Kuyruğa ekle, toplu gönder ve durumu takip et
+- 🔄 **Çoklu Hesap** — Birden fazla SMTP hesabı kaydet, kolayca geçiş yap
+- 🌗 **Otomatik Tema** — Windows Açık / Koyu temasına otomatik uyum sağlar
+- 🔀 **Spoofing** — Gönderen adresini özelleştir (SMTP sunucusu izin veriyorsa)
+
+## 🛠️ Gereksinimler
+
+| | |
+|---|---|
+| **İşletim Sistemi** | Windows 10 / 11 (x64) |
+| **Çalışma Zamanı** | [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472) |
+| **IDE** *(geliştirici)* | Visual Studio 2022+ |
 
 ## 🚀 Başlangıç
 
@@ -115,6 +119,14 @@ cd MAB-Mailer
 1. `MAB Mailer.slnx` dosyasını **Visual Studio** ile açın
 2. **NuGet Restore** işleminin tamamlanmasını bekleyin
 3. **Build → Start** ▶️
+
+## 🤝 Katkıda Bulunma
+
+Katkılarınızı bekliyoruz! **Issue** açabilir veya **Pull Request** gönderebilirsiniz.
+
+## 📄 Lisans
+
+Bu proje [MIT Lisansı](LICENSE) ile lisanslanmıştır.
 
 ---
 
@@ -157,24 +169,6 @@ MAB Mailer/
 ├── MailDraft.cs                    # Queue item model
 └── MessageTemplate.cs              # Message template model
 ```
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to open an **Issue** or submit a **Pull Request**.
-
-## 🤝 Katkıda Bulunma
-
-Katkılarınızı bekliyoruz! **Issue** açabilir veya **Pull Request** gönderebilirsiniz.
-
----
-
-## 📄 License / Lisans
-
-This project is licensed under the [MIT License](LICENSE).
-
-Bu proje [MIT Lisansı](LICENSE) ile lisanslanmıştır.
 
 ---
 
