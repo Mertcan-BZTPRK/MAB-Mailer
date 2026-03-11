@@ -3,7 +3,6 @@
 # 📬 MAB Mailer
 
 **Bulk & personalized email sending desktop application**
-**Toplu ve kişiselleştirilmiş e-posta gönderim uygulaması**
 
 [![.NET Framework](https://img.shields.io/badge/.NET%20Framework-4.7.2-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/download/dotnet-framework/net472)
 [![WPF](https://img.shields.io/badge/WPF-Desktop_UI-6C3483?style=for-the-badge&logo=windows&logoColor=white)]()
@@ -11,11 +10,13 @@
 [![License](https://img.shields.io/badge/License-MIT-27AE60?style=for-the-badge)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Windows_x64-0078D6?style=for-the-badge&logo=windows&logoColor=white)]()
 
+[**⬇️ Download / İndir**](https://mabtech.me/Home/ProjectDetail/9)
+
 </div>
 
 ---
 
-## 📸 Screenshots / Ekran Görüntüleri
+## 📸 Screenshots
 
 <div align="center">
 
@@ -27,24 +28,37 @@
 
 ---
 
-## ✨ Features / Özellikler
+## ✨ Features
 
-| | English | Türkçe |
-|---|---|---|
-| 📋 | **Bulk import from Excel** — Generate template, fill, import | **Excel'den toplu aktarım** — Şablon oluştur, doldur, yükle |
-| 👥 | **Group management** — Organize contacts, filter & send | **Grup yönetimi** — Kişileri grupla, filtrele, gönder |
-| ✉️ | **Personalized emails** — Use `{Name}`, `{Surname}`, `{Email}` and dynamic columns | **Kişiselleştirilmiş mail** — `{Ad}`, `{Soyad}`, `{Email}` ve dinamik sütunlar |
-| 📝 | **Message templates** — Save & reuse frequent messages | **Mesaj şablonları** — Sık mesajları kaydet ve tekrar kullan |
-| 🔗 | **HTML links** — Insert clickable links into email body | **HTML link** — Mail içeriğine tıklanabilir link ekle |
-| ✒️ | **Signature support** — Auto-append email signature | **İmza desteği** — Otomatik imza ekleme |
-| 📮 | **Queue system** — Queue drafts, bulk send, track status | **Kuyruk sistemi** — Kuyruğa ekle, toplu gönder, takip et |
-| 🔄 | **Multi-account** — Store multiple SMTP accounts, switch easily | **Çoklu hesap** — Birden fazla hesap kaydet, geçiş yap |
-| 🌗 | **Auto theme** — Follows Windows Light/Dark theme | **Otomatik tema** — Windows Açık/Koyu temasına uyum |
-| 🔀 | **Spoofing** — Custom sender address (if SMTP allows) | **Spoofing** — Gönderen adresini özelleştir (SMTP izinliyse) |
+- 📋 **Bulk Import from Excel** — Generate a template, fill it in, and import contacts instantly
+- 👥 **Group Management** — Organize contacts into groups, filter, and send targeted emails
+- ✉️ **Personalized Emails** — Use variables like `{Name}`, `{Surname}`, `{Email}` and dynamic columns
+- 📝 **Message Templates** — Save and reuse frequently sent messages
+- 🔗 **HTML Links** — Insert clickable hyperlinks directly into the email body
+- ✒️ **Signature Support** — Automatically append your email signature
+- 📮 **Queue System** — Queue drafts, bulk send, and track delivery status
+- 🔄 **Multi-Account** — Store multiple SMTP accounts and switch between them easily
+- 🌗 **Auto Theme** — Automatically follows Windows Light / Dark theme
+- 🔀 **Spoofing** — Customize the sender address (if SMTP server allows)
 
 ---
 
-## 🛠️ Requirements / Gereksinimler
+## ✨ Özellikler
+
+- 📋 **Excel'den Toplu Aktarım** — Şablon oluştur, doldur ve kişileri anında içe aktar
+- 👥 **Grup Yönetimi** — Kişileri grupla, filtrele ve hedefli e-posta gönder
+- ✉️ **Kişiselleştirilmiş E-posta** — `{Ad}`, `{Soyad}`, `{Email}` ve dinamik sütun değişkenleri kullan
+- 📝 **Mesaj Şablonları** — Sık gönderilen mesajları kaydet ve tekrar kullan
+- 🔗 **HTML Link** — Mail içeriğine tıklanabilir bağlantı ekle
+- ✒️ **İmza Desteği** — Otomatik e-posta imzası ekleme
+- 📮 **Kuyruk Sistemi** — Kuyruğa ekle, toplu gönder ve durumu takip et
+- 🔄 **Çoklu Hesap** — Birden fazla SMTP hesabı kaydet, kolayca geçiş yap
+- 🌗 **Otomatik Tema** — Windows Açık / Koyu temasına otomatik uyum sağlar
+- 🔀 **Spoofing** — Gönderen adresini özelleştir (SMTP sunucusu izin veriyorsa)
+
+---
+
+## 🛠️ Requirements
 
 | | |
 |---|---|
@@ -54,17 +68,27 @@
 
 ---
 
-## 🚀 Getting Started / Başlangıç
+## 🛠️ Gereksinimler
 
-### 📥 End User / Kullanıcı
+| | |
+|---|---|
+| **İşletim Sistemi** | Windows 10 / 11 (x64) |
+| **Çalışma Zamanı** | [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472) |
+| **IDE** *(geliştirici)* | Visual Studio 2022+ |
 
-> Download the latest installer from [**Releases**](../../releases) and run it.
+---
+
+## 🚀 Getting Started
+
+### 📥 End User
+
+> Download the latest version from [**here**](https://mabtech.me/Home/ProjectDetail/9) and run the installer.
 > The app creates its database automatically on first launch.
 
-### 👨‍💻 Developer / Geliştirici
+### 👨‍💻 Developer
 
 ```bash
-git clone https://github.com/KULLANICI_ADIN/MAB-Mailer.git
+git clone https://github.com/Mertcan-BZTPRK/MAB-Mailer.git
 cd MAB-Mailer
 ```
 
@@ -74,9 +98,29 @@ cd MAB-Mailer
 
 ---
 
+## 🚀 Başlangıç
+
+### 📥 Kullanıcı
+
+> En son sürümü [**buradan**](https://mabtech.me/Home/ProjectDetail/9) indirin ve yükleyiciyi çalıştırın.
+> Uygulama ilk açılışta veritabanını otomatik olarak oluşturur.
+
+### 👨‍💻 Geliştirici
+
+```bash
+git clone https://github.com/Mertcan-BZTPRK/MAB-Mailer.git
+cd MAB-Mailer
+```
+
+1. `MAB Mailer.slnx` dosyasını **Visual Studio** ile açın
+2. **NuGet Restore** işleminin tamamlanmasını bekleyin
+3. **Build → Start** ▶️
+
+---
+
 ## 📦 Tech Stack / Teknolojiler
 
-| Technology | Purpose |
+| Technology | Purpose / Amaç |
 |---|---|
 | **WPF** | Desktop UI framework |
 | **Microsoft.Data.Sqlite** | Local database (SQLite) |
@@ -116,9 +160,11 @@ MAB Mailer/
 
 ---
 
-## 🤝 Contributing / Katkıda Bulunma
+## 🤝 Contributing
 
 Contributions are welcome! Feel free to open an **Issue** or submit a **Pull Request**.
+
+## 🤝 Katkıda Bulunma
 
 Katkılarınızı bekliyoruz! **Issue** açabilir veya **Pull Request** gönderebilirsiniz.
 
@@ -129,3 +175,11 @@ Katkılarınızı bekliyoruz! **Issue** açabilir veya **Pull Request** göndere
 This project is licensed under the [MIT License](LICENSE).
 
 Bu proje [MIT Lisansı](LICENSE) ile lisanslanmıştır.
+
+---
+
+<div align="center">
+
+Design by [**Mertcan**](https://github.com/Mertcan-BZTPRK)
+
+</div>
