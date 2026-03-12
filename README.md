@@ -55,7 +55,7 @@
 
 ### 📥 End User
 
-> Download the latest version from [**here**](https://mabtech.me/Home/ProjectDetail/9) and run the installer.
+> Download the latest version from [**here**](https://mabtech.me/Home/ProjectDetail/8) and run the installer.
 > The app creates its database automatically on first launch.
 
 ### 👨‍💻 Developer
@@ -106,7 +106,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ### 📥 Kullanıcı
 
-> En son sürümü [**buradan**](https://mabtech.me/Home/ProjectDetail/9) indirin ve yükleyiciyi çalıştırın.
+> En son sürümü [**buradan**](https://mabtech.me/Home/ProjectDetail/8) indirin ve yükleyiciyi çalıştırın.
 > Uygulama ilk açılışta veritabanını otomatik olarak oluşturur.
 
 ### 👨‍💻 Geliştirici
