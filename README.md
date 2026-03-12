@@ -10,7 +10,7 @@
 [![License](https://img.shields.io/badge/License-MIT-27AE60?style=for-the-badge)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Windows_x64-0078D6?style=for-the-badge&logo=windows&logoColor=white)]()
 
-[**⬇️ Download / İndir**](https://mabtech.me/Home/ProjectDetail/9)
+[**⬇️ Download / İndir**](https://mabtech.me/Home/ProjectDetail/8)
 
 </div>
 
