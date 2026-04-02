@@ -12,7 +12,7 @@
 [![License](https://img.shields.io/badge/License-MIT-27AE60?style=for-the-badge)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Windows_x64-0078D6?style=for-the-badge&logo=windows&logoColor=white)]()
 <br>
-<h4><a href="https://mabtech.me//Projects/mab-mailer" style="color: #0ea5e9; text-decoration: none;">⬇️ Download / İndir</a></h4>
+<h4><a href="https://mabtech.me/Projects/mab-mailer" style="color: #0ea5e9; text-decoration: none;">⬇️ Download / İndir</a></h4>
 <br>
 
 </div>
